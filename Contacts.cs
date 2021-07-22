@@ -6,7 +6,7 @@ namespace AddressBookUsingOOPS
 {
     class Contacts
     {
-        string firstName, lastName, address, city, state, zipCode, phoneNumber, eMail;
+        public string firstName, lastName, address, city, state, zipCode, phoneNumber, eMail;
         public Contacts(string FirstName, string LastName, string Address, string City, string State, string ZipCode, string PhoneNumber, string Email)
         {
             this.firstName = FirstName;

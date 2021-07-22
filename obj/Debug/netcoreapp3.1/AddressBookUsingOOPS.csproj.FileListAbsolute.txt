@@ -1,0 +1,13 @@
+E:\C#\AddressBookUsingOOPS\bin\Debug\netcoreapp3.1\AddressBookUsingOOPS.exe
+E:\C#\AddressBookUsingOOPS\bin\Debug\netcoreapp3.1\AddressBookUsingOOPS.deps.json
+E:\C#\AddressBookUsingOOPS\bin\Debug\netcoreapp3.1\AddressBookUsingOOPS.runtimeconfig.json
+E:\C#\AddressBookUsingOOPS\bin\Debug\netcoreapp3.1\AddressBookUsingOOPS.runtimeconfig.dev.json
+E:\C#\AddressBookUsingOOPS\bin\Debug\netcoreapp3.1\AddressBookUsingOOPS.dll
+E:\C#\AddressBookUsingOOPS\bin\Debug\netcoreapp3.1\AddressBookUsingOOPS.pdb
+E:\C#\AddressBookUsingOOPS\obj\Debug\netcoreapp3.1\AddressBookUsingOOPS.csproj.AssemblyReference.cache
+E:\C#\AddressBookUsingOOPS\obj\Debug\netcoreapp3.1\AddressBookUsingOOPS.AssemblyInfoInputs.cache
+E:\C#\AddressBookUsingOOPS\obj\Debug\netcoreapp3.1\AddressBookUsingOOPS.AssemblyInfo.cs
+E:\C#\AddressBookUsingOOPS\obj\Debug\netcoreapp3.1\AddressBookUsingOOPS.csproj.CoreCompileInputs.cache
+E:\C#\AddressBookUsingOOPS\obj\Debug\netcoreapp3.1\AddressBookUsingOOPS.dll
+E:\C#\AddressBookUsingOOPS\obj\Debug\netcoreapp3.1\AddressBookUsingOOPS.pdb
+E:\C#\AddressBookUsingOOPS\obj\Debug\netcoreapp3.1\AddressBookUsingOOPS.genruntimeconfig.cache

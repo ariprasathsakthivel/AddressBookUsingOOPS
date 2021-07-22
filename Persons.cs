@@ -24,6 +24,17 @@ namespace AddressBookUsingOOPS
                 }
             }
         }
+        public void PersonDelete(string key)
+        {
+            foreach (Contacts element in contacts)
+            {
+                if (element.firstName == key)
+                {
+                    contacts.Remove(element);
+                    break;
+                }
+            }
+        }
         public void ContactEdit(Contacts contact)
         {
             Console.WriteLine("Which data do you want to edit. Enter the following keys:'A'-Address;'C'-City;'S'-State;'Z'-ZipCode;'N'-PhoneNumber;'E'-Email");

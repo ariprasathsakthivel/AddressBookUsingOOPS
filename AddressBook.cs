@@ -4,17 +4,17 @@ using System.Text;
 
 namespace AddressBookUsingOOPS
 {
-    class Persons
+    class AddressBook
     {
         private List<Contacts> contacts = new List<Contacts>();
         public void ContactsBuilder(string FirstName, string LastName, string Address, string City, string State, string ZipCode, string PhoneNumber, string Email)
         {
             Contacts contact=new Contacts(FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, Email);
-            contacts.Add(contact);
+            this.contacts.Add(contact);
         }
         public void ContactEdit(string key)
         {
-            foreach (Contacts element in contacts)
+            foreach (Contacts element in this.contacts)
             {
                 if (element.firstName==key)
                 {
@@ -26,11 +26,11 @@ namespace AddressBookUsingOOPS
         }
         public void PersonDelete(string key)
         {
-            foreach (Contacts element in contacts)
+            foreach (Contacts element in this.contacts)
             {
                 if (element.firstName == key)
                 {
-                    contacts.Remove(element);
+                    this.contacts.Remove(element);
                     break;
                 }
             }
@@ -69,6 +69,13 @@ namespace AddressBookUsingOOPS
                     Console.WriteLine("Please enter a ");
                     ContactEdit(contact);
                     break;
+            }
+        }
+        public void Display()
+        {
+            foreach (Contacts address in contacts)
+            {
+                Console.WriteLine(address.firstName + " " + address.lastName + "\n" + address.address + "\n" + address.city + "\n" + address.state + "\n" + address.zipCode + "\n" + address.phoneNumber + "\n" + address.eMail);
             }
         }
     }

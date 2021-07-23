@@ -6,31 +6,47 @@ namespace AddressBookUsingOOPS
 {
     class AddressBook
     {
-        private List<Contacts> contacts = new List<Contacts>();
-        public void ContactsBuilder(string FirstName, string LastName, string Address, string City, string State, string ZipCode, string PhoneNumber, string Email)
+        private List<Contacts> contacts;
+        private Dictionary<string, List<Contacts>> addressBookCollection;
+        public AddressBook()
+        {
+            this.contacts = new List<Contacts>();
+            this.addressBookCollection = new Dictionary<string, List<Contacts>>();
+        }
+        public void ContactBuilder(string AddressBook, string FirstName, string LastName, string Address, string City, string State, string ZipCode, string PhoneNumber, string Email)
         {
             Contacts contact=new Contacts(FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, Email);
-            this.contacts.Add(contact);
+            this.AddressBookCheck(AddressBook, contact);
+        }
+        public void AddressBookCheck(string AddressBook, Contacts contact)
+        {
+            if (this.addressBookCollection.ContainsKey(AddressBook)==true)
+            {
+                this.addressBookCollection[AddressBook].Add(contact);
+            }
+            else
+            {
+                this.addressBookCollection.Add(AddressBook, contacts);
+            }
         }
         public void ContactEdit(string key)
         {
-            foreach (Contacts element in this.contacts)
+            foreach (Contacts element in contacts)
             {
                 if (element.firstName==key)
                 {
                     ContactEdit(element);
-                    element.toString();
                     break;
                 }
             }
         }
         public void PersonDelete(string key)
         {
-            foreach (Contacts element in this.contacts)
+            foreach (Contacts element in contacts)
             {
                 if (element.firstName == key)
                 {
-                    this.contacts.Remove(element);
+                    contacts.Remove(element);
                     break;
                 }
             }
@@ -71,11 +87,11 @@ namespace AddressBookUsingOOPS
                     break;
             }
         }
-        public void Display()
+        public void Display(string key)
         {
-            foreach (Contacts address in contacts)
+            foreach (var contact in addressBookCollection[key])
             {
-                Console.WriteLine(address.firstName + " " + address.lastName + "\n" + address.address + "\n" + address.city + "\n" + address.state + "\n" + address.zipCode + "\n" + address.phoneNumber + "\n" + address.eMail);
+                contact.toString();
             }
         }
     }
